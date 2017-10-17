@@ -7,9 +7,9 @@ defaults: &defaults
   developer_email: a.dev@foo.bar
   cloudfront_hostname: foo.cloudfront.net
   google_analytics_id: UA-00000000-0
-  facebook_app_id: ***
-  twitter_username: ***
-  facebook_username: ***
+  facebook_app_id: ""
+  twitter_username: ""
+  facebook_username: ""
 
 test:
   host: sitename.test
