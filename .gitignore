@@ -6,7 +6,7 @@ sinatra.log
 .DS_Store
 public/.DS_Store
 db/*.sqlite3
-
+config/*.yml
 !config/intercom.yml
 .powenv
 .capistrano/metrics
