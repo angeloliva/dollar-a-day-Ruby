@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
 gem 'aws-sdk', '~> 1.14.1'
 gem 'area', '~> 0.10.0'
 gem "audited-activerecord", "4.0.0.rc1"
@@ -11,16 +12,20 @@ gem 'delayed_job_active_record', '~> 4.0.1'
 gem 'exception_notification', '~> 4.0.0'
 gem 'holidays','~> 1.0.5'
 gem 'flot-rails'
-gem 'mysql2', '~> 0.3.14'
+gem 'kaminari', '~> 0.14.1'
+#gem 'mysql2', '~> 0.3.14'
+gem 'mysql2', '~> 0.3.21'
 gem 'nokogiri'
 gem 'paperclip', '~> 4.2.0'
 gem 'premailer-rails', '~> 1.8.0'
+gem 'psych', '~> 1.3.4'
 gem 'rails', '4.1.13'
 gem 'ransack', '~> 1.3.0'
 gem 'redis-objects', '~> 0.5.3'
 gem 'rest-client', '~> 1.6.9'
 gem 'savon', '~> 2.5.1'
 gem 'stripe', '~> 1.22.0'
+gem 'unicorn'
 
 # Assets
 gem 'autoprefixer-rails'
