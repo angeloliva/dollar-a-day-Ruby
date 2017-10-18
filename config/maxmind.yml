@@ -5,3 +5,7 @@ test:
 development:
   user_id: YOURUSERID
   password: YOURPASSWORD
+
+production:
+  user_id: YOURUSERID
+  password: YOURPASSWORD

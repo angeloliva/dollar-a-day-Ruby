@@ -5,3 +5,7 @@ test:
 development:
   domain: yourmailgundomain.mailgun.org
   api_key: key-****-***************************
+
+production:
+  domain: yourmailgundomain.mailgun.org
+  api_key: key-****-***************************
