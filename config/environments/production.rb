@@ -94,7 +94,7 @@ Rails.application.configure do
   DollarADay::Application.config.middleware.use ExceptionNotification::Rack,
     email: {
       email_prefix: "",
-      sender_address: ""},
+      sender_address: "",
       exception_recipients: "",
       email_headers: {"X-Mailgun-Track" => "no"}
     }
