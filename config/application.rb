@@ -22,6 +22,8 @@ module DollarADay
 
     config.action_mailer.preview_path = "#{Rails.root}/app/mailers/previews"
 
+    config.eager_load_paths << Rails.root.join('config')
+
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     config.time_zone = 'Eastern Time (US & Canada)'
