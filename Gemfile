@@ -26,7 +26,6 @@ gem 'rest-client', '~> 1.6.9'
 gem 'savon', '~> 2.5.1'
 gem 'stripe', '~> 1.22.0'
 gem 'unicorn'
-gem 'rails_12factor', group: :production
 
 # Assets
 gem 'autoprefixer-rails'
@@ -71,4 +70,8 @@ end
 group :development, :staging do
   gem 'capistrano', '3.4.0',        require: false
   gem 'capistrano-rails', '~> 1.1.3', require: false
+end
+
+group :production do
+  gem 'rails_12factor'
 end

@@ -22,6 +22,9 @@ module DollarADay
 
     config.action_mailer.preview_path = "#{Rails.root}/app/mailers/previews"
 
+    # Do not load entire app when precompiling assets
+    config.assets.initialize_on_precompile = false
+
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     config.time_zone = 'Eastern Time (US & Canada)'
@@ -38,4 +41,14 @@ module DollarADay
       Dir["#{Rails.root}/lib/network_for_good/*.rb"].each do |f| require f end
     end
   end
+
+  module AssetsInitializers
+    class Railtie < Rails::Railtie
+      initializer "assets_initializers.initialize_rails",
+                  :group => :assets do |app|
+        require "#{Rails.root}/config/initializers/config.rb"
+      end
+    end
+  end
+
 end
