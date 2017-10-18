@@ -1,5 +1,5 @@
 
-CONFIG = YAML.load_file(File.join(Rails.root, 'config', 'config.yml'))[Rails.env].symbolize_keys!
+
 
 
 # Load order issue -- gotta load these here instead of development.rb
