@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.1.2'
 gem 'aws-sdk', '~> 1.14.1'
 gem 'area', '~> 0.10.0'
 gem "audited-activerecord", "4.0.0.rc1"
@@ -26,6 +26,7 @@ gem 'rest-client', '~> 1.6.9'
 gem 'savon', '~> 2.5.1'
 gem 'stripe', '~> 1.22.0'
 gem 'unicorn'
+gem 'rails_12factor', group: :production
 
 # Assets
 gem 'autoprefixer-rails'
@@ -40,11 +41,11 @@ gem 'intercom'
 # Helpers
 gem 'nav_lynx'
 
-
+group :test, :development do
   gem 'byebug'
+end
 
-
-
+group :test do
   gem 'factory_girl', '~> 4.1.0'
   gem 'factory_girl_rails', '~> 4.1.0'
   gem 'mocha', require: nil
@@ -53,9 +54,9 @@ gem 'nav_lynx'
   gem 'timecop'
   gem 'simplecov', :require => false
   gem 'stripe-ruby-mock', require: 'stripe_mock'
+end
 
-
-
+group :development do
   gem 'rubocop'
   gem 'spring'
   gem 'better_errors'
@@ -65,8 +66,9 @@ gem 'nav_lynx'
   gem 'guard'
   gem 'guard-livereload', require: false
   gem 'guard-pow', require: false
+end
 
-
+group :development, :staging do
   gem 'capistrano', '3.4.0',        require: false
   gem 'capistrano-rails', '~> 1.1.3', require: false
-
+end
