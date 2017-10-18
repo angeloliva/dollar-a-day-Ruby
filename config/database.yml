@@ -12,6 +12,6 @@ test:
   database: rails-db
   <<: *defaults
 
-development:
+production:
   database: heroku_8349d7c22f6b144
   <<: *defaults
