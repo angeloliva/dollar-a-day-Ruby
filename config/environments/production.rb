@@ -75,6 +75,15 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
+  module AssetsInitializers
+    class Railtie < Rails::Railtie
+      initializer "assets_initializers.initialize_rails",
+                  :group => :assets do |app|
+        require "#{Rails.root}/config/initializers/config.rb"
+      end
+    end
+  end
+
   # To enable CORS for CF and S3: http://www.holovaty.com/writing/cors-ie-cloudfront/
   config.action_controller.asset_host = CONFIG[:cloudfront_hostname]
   config.action_mailer.asset_host = "https://#{CONFIG[:cloudfront_hostname]}"
@@ -97,13 +106,4 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  module AssetsInitializers
-    class Railtie < Rails::Railtie
-      initializer "assets_initializers.initialize_rails",
-                  :group => :assets do |app|
-        require "#{Rails.root}/config/initializers/config.rb"
-      end
-    end
-  end
-  
 end
