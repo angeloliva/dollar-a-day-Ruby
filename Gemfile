@@ -40,11 +40,11 @@ gem 'intercom'
 # Helpers
 gem 'nav_lynx'
 
-group :test, :development do
-  gem 'byebug'
-end
 
-group :test do
+  gem 'byebug'
+
+
+
   gem 'factory_girl', '~> 4.1.0'
   gem 'factory_girl_rails', '~> 4.1.0'
   gem 'mocha', require: nil
@@ -53,9 +53,9 @@ group :test do
   gem 'timecop'
   gem 'simplecov', :require => false
   gem 'stripe-ruby-mock', require: 'stripe_mock'
-end
 
-group :development do
+
+
   gem 'rubocop'
   gem 'spring'
   gem 'better_errors'
@@ -65,9 +65,8 @@ group :development do
   gem 'guard'
   gem 'guard-livereload', require: false
   gem 'guard-pow', require: false
-end
 
-group :development, :staging do
+
   gem 'capistrano', '3.4.0',        require: false
   gem 'capistrano-rails', '~> 1.1.3', require: false
-end
+
