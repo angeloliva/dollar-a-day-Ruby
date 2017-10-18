@@ -38,6 +38,4 @@ module DollarADay
       Dir["#{Rails.root}/lib/network_for_good/*.rb"].each do |f| require f end
     end
   end
-
-  CONFIG = YAML.load_file(File.join(Rails.root, 'config', 'config.yml'))[Rails.env].symbolize_keys!
 end
