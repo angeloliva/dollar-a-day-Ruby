@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+
 gem 'aws-sdk', '~> 1.14.1'
 gem 'area', '~> 0.10.0'
 gem "audited-activerecord", "4.0.0.rc1"
