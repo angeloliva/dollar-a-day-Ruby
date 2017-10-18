@@ -50,11 +50,11 @@ class ApplicationController < ActionController::Base
     @meta_tags['fb:app_id']       = FACEBOOK[:app_id]
     @meta_tags['og:url']          = "#{root_url}"
     @meta_tags['og:type']         = "website"
-    @meta_tags['og:site_name']    = CONFIG[:name]
-    @meta_tags['og:title']        = CONFIG[:name]
+    @meta_tags['og:site_name']    = ""
+    @meta_tags['og:title']        = ""
     @meta_tags['og:image']        = view_context.image_path "facebook-avatar.jpg"
     @meta_tags['og:image:secure_url'] = view_context.image_path "facebook-avatar.jpg"
-    @meta_tags['og:description']  = CONFIG[:description]
+    @meta_tags['og:description']  = ""
   end
 
   def current_subscriber(force = false)
