@@ -1,6 +1,6 @@
 defaults: &defaults
   adapter: mysql2
-  host: mysql2://b07eb759827a55:03e8ff0e@us-cdbr-iron-east-05.cleardb.net/heroku_8349d7c22f6b144?reconnect=true
+  CLEARDB_DATABASE_URL: mysql2://b07eb759827a55:03e8ff0e@us-cdbr-iron-east-05.cleardb.net/heroku_8349d7c22f6b144?reconnect=true
   username: b07eb759827a55
   password: 03e8ff0e
 
