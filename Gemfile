@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.2.8'
 gem 'aws-sdk', '~> 1.14.1'
 gem 'area', '~> 0.10.0'
 gem "audited-activerecord", "4.0.0.rc1"
@@ -74,4 +74,5 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'pg'
 end
