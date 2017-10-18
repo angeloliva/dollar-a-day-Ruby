@@ -17,6 +17,6 @@ production:
   database: heroku_8349d7c22f6b144
   username: b07eb759827a55
   password: 03e8ff0e
-  host: "84.39.2.1"
+  hostname: "84.39.2.1"
   port: 3306
   secure_auth: false
