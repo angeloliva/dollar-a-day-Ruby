@@ -19,9 +19,6 @@ Rails.application.configure do
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
-  # Do not load entire app when precompiling assets
-  config.assets.initialize_on_precompile = false
-
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = false
 
@@ -75,27 +72,18 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
-  module AssetsInitializers
-    class Railtie < Rails::Railtie
-      initializer "assets_initializers.initialize_rails",
-                  :group => :assets do |app|
-        require "#{Rails.root}/config/initializers/config.rb"
-      end
-    end
-  end
-
   # To enable CORS for CF and S3: http://www.holovaty.com/writing/cors-ie-cloudfront/
-  config.action_controller.asset_host = ""
-  config.action_mailer.asset_host = ""
+  config.action_controller.asset_host = CONFIG[:cloudfront_hostname]
+  config.action_mailer.asset_host = "https://#{CONFIG[:cloudfront_hostname]}"
 
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
 
   DollarADay::Application.config.middleware.use ExceptionNotification::Rack,
     email: {
-      email_prefix: "",
-      sender_address: "",
-      exception_recipients: "",
+      email_prefix: "[#{CONFIG[:name]}] ",
+      sender_address: %{"#{CONFIG[:name]} Notifier" <#{CONFIG[:developer_email]}>},
+      exception_recipients: CONFIG[:developer_email],
       email_headers: {"X-Mailgun-Track" => "no"}
     }
 
@@ -105,5 +93,4 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
 end
