@@ -19,7 +19,7 @@ module DollarADay
       #{config.root}/lib/data
       #{config.root}/lib/core_ext
     )
-    config.assets.initialize_on_precompile = false
+    
     config.action_mailer.preview_path = "#{Rails.root}/app/mailers/previews"
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
