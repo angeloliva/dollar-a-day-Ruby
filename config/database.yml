@@ -1,6 +1,6 @@
 defaults: &defaults
   adapter: mysql2
-  host: us-cdbr-iron-east-05.cleardb.net
+  host: 192.168.0.90
   username: b07eb759827a55
   password: 03e8ff0e
 

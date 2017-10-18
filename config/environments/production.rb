@@ -72,7 +72,7 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
-  CONFIG = YAML.load_file(File.join(Rails.root, 'config', 'config.yml'))[Rails.env].symbolize_keys!
+  
 
   # To enable CORS for CF and S3: http://www.holovaty.com/writing/cors-ie-cloudfront/
   config.action_controller.asset_host = CONFIG[:cloudfront_hostname]
