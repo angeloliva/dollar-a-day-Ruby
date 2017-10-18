@@ -4,5 +4,5 @@ test:
 development:
   secret: ABC123
 
-  production:
-    secret: ABC123
+production:
+  secret: ABC123
