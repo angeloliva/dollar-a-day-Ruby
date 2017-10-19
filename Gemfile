@@ -13,7 +13,7 @@ gem 'exception_notification', '~> 4.0.0'
 gem 'holidays','~> 1.0.5'
 gem 'flot-rails'
 gem 'kaminari', '~> 0.14.1'
-#gem 'mysql2', '~> 0.3.14'
+gem 'mysql2', '~> 0.3.14'
 # gem 'mysql2', '~> 0.3.21'
 gem 'nokogiri'
 gem 'paperclip', '~> 4.2.0'
@@ -74,5 +74,4 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
 end
