@@ -1,5 +1,5 @@
 class AdminMailer < BaseMailer
-  default "to"        => Rails.env.production? ? [CONFIG[:developer_email]]
+  
 
   def delayed_jobs
     @errored_jobs = Delayed::Job.stuck
