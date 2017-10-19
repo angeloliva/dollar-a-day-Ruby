@@ -1,7 +1,7 @@
 defaults: &defaults
   adapter: mysql2
-  username: b07eb759827a55
-  password: 03e8ff0e
+  username: b5e65678394a46
+  password: 8307469c
 
 development:
   database: rails-db
@@ -12,6 +12,6 @@ test:
   <<: *defaults
 
 production:
-  database: heroku_8349d7c22f6b144
+  database: heroku_b3c9d8ef3d59b1e
   host: us-cdbr-iron-east-05.cleardb.net
   <<: *defaults
