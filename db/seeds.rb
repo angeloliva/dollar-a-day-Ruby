@@ -1,6 +1,6 @@
 # This seed file is good for resetting development environments.
 
-throw "Sure you want to empty the database?" if Rails.env.production?
+# throw "Sure you want to empty the database?" if Rails.env.production?
 
 # CLEAR DATABASE
 ActiveRecord::Base.establish_connection
