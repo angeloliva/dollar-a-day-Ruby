@@ -19,6 +19,8 @@ module DollarADay
       #{config.root}/lib/data
       #{config.root}/lib/core_ext
     )
+
+    config.serve_static_assets = true
     
     config.action_mailer.preview_path = "#{Rails.root}/app/mailers/previews"
 
